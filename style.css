@@ -20,6 +20,24 @@ body {
     margin: 0;
     padding: 0;
 }
+
+button {
+    font-size: 20px;
+    width: 250px;
+    background-color: rgb(56, 146, 250);
+    border-radius: 8px;
+    height: fit-content;
+}
+
+button:hover {
+    background-color: rgb(37, 57, 238);
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
 .main-window{
     display: flex;
     align-items: stretch;
@@ -44,6 +62,9 @@ body {
     background-color: var(--color-oxford-blue);
     padding: 10px 20px;
     min-height: 50px;
+    display: flex;
+    justify-content: center;
+
 }
 .main-content {
     background-color: var(--color-gainsboro);
