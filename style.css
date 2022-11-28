@@ -49,3 +49,17 @@ body {
     background-color: var(--color-gainsboro);
     flex-grow: 1;
 }
+.team-name {
+    background: url("./images/sky3.jpg");
+   -webkit-background-clip: text ;
+   background-clip: text;
+   color: transparent;
+  font-style: normal;
+  font-size: 100px;
+  letter-spacing: 2px;
+  line-height: 1,5;
+  font-family:cursive ;
+  background-size:contain ;
+  width: auto
+  
+}
