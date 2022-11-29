@@ -66,9 +66,14 @@ a {
     justify-content: center;
 
 }
-.main-content {
+.M-main-content {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
     background-color: var(--color-gainsboro);
     flex-grow: 1;
+    border: 10px;
+    border-color: #0B1F32;
 }
 .team-name {
     background: url("./images/sky3.jpg");
@@ -86,12 +91,63 @@ a {
 }
 
 .M-member1 {
+    width: 300px;
     display:flex;
-    justify-content: flex-start;
     flex-direction: column;
+    border: 7px solid rgb(163, 29, 163);
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+    background-color: rgb(56, 146, 250);
+    font-size: large;
+}
+
+.M-member2 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 7px solid rgb(163, 29, 163);
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+    background-color: rgb(56, 146, 250);
+    font-size: large;
+
+}
+.M-member3 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 7px solid rgb(163, 29, 163) ;
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+    background-color: rgb(56, 146, 250);
+    font-size: large;
+    
 }
 
 .M-table {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+}
+
+.M-team {
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    border: 7px solid rgb(163, 29, 163);
+    border-radius: 20px;
+    background-color: rgb(56, 146, 250);
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    font-size: large;
+}
+.M-members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
