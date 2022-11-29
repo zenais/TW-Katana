@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --color-oxford-blue: #0B1F32;
+    --color-prussian-blue: #102E4A;
+    --color-gainsboro: #DDDCE5;
+    --color-cultured: #F8F8F8;
+    --color-light-coral: #F07F7F;
+    --color-misty-rose: #FFE0D6;
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-prussian-blue);
+    
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-size: 20px;
+    width: 250px;
+    background-color: rgb(56, 146, 250);
+    border-radius: 8px;
+    height: fit-content;
+}
+
+button:hover {
+    background-color: rgb(37, 57, 238);
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+.main-window{
+    display: flex;
+    align-items: stretch;
+    min-height: 800px;
+}
+.navbar{
+    align-items: center;
+    background-color: var(--color-oxford-blue);
+    color: var(--color-cultured);
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    padding: 7px 20px;
+}
+.sidebar {
+    background-color: var(--color-prussian-blue);
+    color: var(--color-misty-rose);
+    font-size: 24px;
+    flex-basis: 20%;
+}
+.side-item {
+    background-color: var(--color-oxford-blue);
+    padding: 10px 20px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+.main-content {
+    background-color: var(--color-gainsboro);
+    flex-grow: 1;
+}
+.team-name {
+    background: url("./images/sky3.jpg");
+   -webkit-background-clip: text ;
+   background-clip: text;
+   color: transparent;
+  font-style: normal;
+  font-size: 100px;
+  letter-spacing: 2px;
+  line-height: 1,5;
+  font-family:cursive ;
+  background-size:contain ;
+  width: auto
+  
+}
