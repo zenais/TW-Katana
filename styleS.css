@@ -82,7 +82,7 @@ a {
   width: auto;
 }
 
-.proTable{
-    border: 1px solid;
-    color:rgb(37, 57, 238)
+.SproTable {
+border-collapse: collapse
+
 }
