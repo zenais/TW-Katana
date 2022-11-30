@@ -102,6 +102,7 @@ border-collapse: collapse
   text-shadow: 1px 1px 1px rgb(112, 10, 255), 2px 2px 1px rgb(20, 30, 226);
 }
 #CodecoolLogo{
-  float:right;
-
+  position: relative;
+   top: -700px;
+   right: -1000px;
 }
