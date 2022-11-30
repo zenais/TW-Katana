@@ -92,13 +92,21 @@ a {
     gap: 20px 40px;
     flex-direction: column;
     align-items: stretch;
-    font-size: medium;
+    font-size: 15px;
 }
 .z-main-content > div {
     background-color: lightgray;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-size: 20px;
 }
+.z-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 10px;
+}
+
 .z-main-content > div:hover{
     background-color: rgb(221, 221, 221);
 }
@@ -117,8 +125,14 @@ a {
     height: 30px;
     margin: 5px 10px;
 }
+
+
 .z-katas {
+    background-color: var(--color-prussian-blue);
+    color: var(--color-cultured);
+    font-size: larger;
     text-align: center;
+    border-radius: 10px;
 }
 .z-player {
     display: flex;
@@ -131,8 +145,19 @@ a {
     flex-grow: 1;
     text-align: center;
 }
+.z-name:hover {
+    transform: scale(1.2);
+    color: #102E4A;
+}
 .z-katas-item{
     padding: 0 10%;   
+    font-size: 20px;
+}
+.z-katas-item > h4 {
+    font-size: 25px;
+}
+.z-katas-item > h3 {
+    font-size: 30px;
 }
 .z-katas-item > pre {
     background-color: var(--color-oxford-blue);
