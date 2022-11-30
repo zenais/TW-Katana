@@ -74,7 +74,7 @@ a {
     background: url("./images/sky3.jpg");
    -webkit-background-clip: text ;
    background-clip: text;
-   color: transparent;
+    color: transparent;
   font-style: normal;
   font-size: 100px;
   letter-spacing: 2px;
@@ -83,4 +83,62 @@ a {
   background-size:contain ;
   width: auto
   
+}
+
+/* //////////////ZINAIDA CLASSES////////////////// */
+.z-main-content {
+    padding: 5%;
+    display: flex;
+    gap: 20px 40px;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: medium;
+}
+.z-main-content > div {
+    background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.z-main-content > div:hover{
+    background-color: rgb(221, 221, 221);
+}
+.z-lang {
+    background-color: #F07F7F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.z-lang-item {
+    display: flex;
+    align-items: center;
+}
+.z-lang-item > img {
+    width: 30px;
+    height: 30px;
+    margin: 5px 10px;
+}
+.z-katas {
+    text-align: center;
+}
+.z-player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 40px;
+}
+.z-player > div {
+    flex-grow: 1;
+    text-align: center;
+}
+.z-katas-item{
+    padding: 0 10%;   
+}
+.z-katas-item > pre {
+    background-color: var(--color-oxford-blue);
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 10px;
 }

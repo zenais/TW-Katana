@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Katana</title>
+    <link rel="stylesheet" href="style-z.css">
+    <script src="https://kit.fontawesome.com/247d83f13a.js" crossorigin="anonymous"></script>
+    <title>Lessons</title>
 </head>
 <body>
     <div class="navbar">
@@ -44,8 +45,107 @@
             </div>
         </div>
         <div class="main-content">
-            THIS IS MAIN CONTENT
-            <!-- Page for the whole team with its final score -->
+            <!-- ########################################################## -->
+            <div class="z-main-content">
+                <div class="z-lang">
+                    <div class="z-lang-item">
+                        <img src="./images/Z_img/html-icon.svg" alt="html icon">
+                        <h3 class="z-h3">HTML</h3>
+                    </div>
+                    <div class="z-lang-item">
+                        <img src="./images/Z_img/css-icon.svg" alt="css icon">
+                        <h3 class="z-h3">CSS</h3>                        
+                    </div>
+                    <div class="z-lang-item">
+                        <img src="./images/Z_img/js-icon.svg" alt="java script icon">
+                        <h3 class="z-h3">JAVA SCRIPT</h3>
+                    </div>
+                </div>
+                <div class="z-katas">                    
+                    <h3 class="z-h3">KATAS</h3>                    
+                </div>
+                <div class="z-player">
+                    <div><h3 class="z-h3">San</h3></div>
+                    <div><h3 class="z-h3">Manuel</h3></div>
+                    <div><h3 class="z-h3">Zinaida</h3></div>
+                </div>
+                <div class="z-katas-item" id="z-kata-zinaida">
+                    <h3>Zinaidas Katas</h3>
+                    <h4>Get match by pattern</h4>
+                    <article>
+                        You are given a string with three lowercase letters ( pattern ).
+
+                        <h4>Your Task</h4>
+
+                        Implement a function find_matched_by_pattern(pattern) that returns a predicate function, testing a string input and returning true if the string is matching the pattern, false otherwise.
+
+                        A word is considered a match for a given pattern if the first occurrence of each letter of the pattern is found in the same order in the word. If a character in the pattern is duplicated, the same logic applies further.
+
+                        The pattern will always be a string of size 3.
+                    </article>
+                    <pre>
+    function findMatchedByPattern(pattern) {
+        // TODO: implement this!
+        const f = (e) => {
+            //
+            let C1 = e.indexOf(pattern[0]);
+        
+            let C2 = e.indexOf(pattern[1]);
+            if (C2 < C1) return false;
+            C2 = e.substring(C1+1).indexOf(pattern[1]);
+        
+            let C3 = e.indexOf(pattern[2]);
+            if (C3 < C1) return false;
+            C3 = e.substring(C1+1).indexOf(pattern[2]);
+            if (C3 < C2) return false;
+            C3 = e.substring(C2 + C1 + 2).indexOf(pattern[2]);
+        
+            return C1 >= 0 && C2 >= 0 && C3 >= 0;
+        };
+        return f;
+    }
+                        </pre>
+                    <br><br>
+
+                    <h4>Name of Kata 2</h4>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
+                    <code>
+                        console.log("Hello World");
+                    </code>
+                </div>
+                <div class="z-katas-item" id="z-kata-manuel">
+                    <h3>Manuels Katas</h3>
+                    <h4>Name of Kata </h4>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
+                    <code>
+                        console.log("Hello World");
+                    </code>
+                    <br><br>
+
+                    <h4>Name of Kata 2</h4>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
+                    <code>
+                        console.log("Hello World");
+                    </code>
+                </div>
+                <div class="z-katas-item" id="z-kata-san">
+                    <h3>Sans Katas</h3>
+                    <h4>Name of Kata </h4>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
+                    <code>
+                        console.log("Hello World");
+                    </code>
+                    <br><br>
+
+                    <h4>Name of Kata 2</h4>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
+                    <code>
+                        console.log("Hello World");
+                    </code>
+                </div>
+
+            </div> <!--END OF MAIN CONTENT-->
+            <!-- ########################################################## -->
         </div>   
     </div> 
 </body>
