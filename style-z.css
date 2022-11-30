@@ -103,7 +103,6 @@ a {
     background-color: rgb(221, 221, 221);
 }
 .z-lang {
-    background-color: #F07F7F;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -141,4 +140,7 @@ a {
     font-size: 18px;
     padding: 20px;
     border-radius: 10px;
+}
+.hide {
+    display: none;
 }
