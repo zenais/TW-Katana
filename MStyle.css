@@ -102,10 +102,10 @@ a:hover {
 }
 
 .M-member1 {
-    width: 300px;
+    width: 350px;
     display:flex;
     flex-direction: column;
-    border: 7px solid rgb(163, 29, 163);
+    border: 5px solid rgb(163, 29, 163);
     border-radius: 20px;
     height: fit-content;
     text-align: center;
@@ -114,10 +114,10 @@ a:hover {
 }
 
 .M-member2 {
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    border: 7px solid rgb(163, 29, 163);
+    border: 5px solid rgb(163, 29, 163);
     border-radius: 20px;
     height: fit-content;
     text-align: center;
@@ -126,10 +126,10 @@ a:hover {
 
 }
 .M-member3 {
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    border: 7px solid rgb(163, 29, 163) ;
+    border: 5px solid rgb(163, 29, 163) ;
     border-radius: 20px;
     height: fit-content;
     text-align: center;
@@ -147,7 +147,7 @@ a:hover {
     display:flex;
     flex-direction: column;
     align-self: center;
-    border: 7px solid rgb(163, 29, 163);
+    border: 5px solid rgb(163, 29, 163);
     border-radius: 20px;
     background-color: rgb(56, 146, 250);
     width: 500px;
