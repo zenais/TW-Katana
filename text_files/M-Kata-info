@@ -1,0 +1,24 @@
+Create Phone Number
+
+function createPhoneNumber(numbers){
+  let phoneNumber = "(xxx) xxx-xxxx"
+  
+  for (let i = 0; i < numbers.length; i++) {
+    phoneNumber = phoneNumber.replace("x", numbers[i]);
+  }
+  return phoneNumber
+}
+
+
+Stop gninnipS My sdroW!
+
+function spinWords(string) {
+  let newArr = string.split(' ');
+  for (let i = 0; i < newArr.length; i++) {
+    if (newArr[i].length >= 5)
+      newArr[i] = newArr[i].split('').reverse().join('');
+  }
+  return newArr.join(' ');
+}
+
+spinWords("Welcome")
