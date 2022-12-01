@@ -74,10 +74,13 @@
                 </div>
                 <div class="z-katas-item hide" id="z-kata-zinaida">
                     <h3>Zinaidas Katas</h3>
-                    <h3>Get match by pattern</h4>
+                    <h3>Twice linear</h4>
                     <article>
-                        You are given a string with three lowercase letters ( pattern ).
+                        Consider a sequence u where u is defined as follows:
                     </article>
+                    <ol>
+                        <li></li>
+                    </ol>
                     <h4>Your Task</h4>
                     <article>
                         Implement a function find_matched_by_pattern(pattern) that returns a predicate function, testing a string input and returning true if the string is matching the pattern, false otherwise.
@@ -86,28 +89,30 @@
 
                         The pattern will always be a string of size 3.
                     </article>
+
                     <pre>
-    function findMatchedByPattern(pattern) {
-        // TODO: implement this!
-        const f = (e) => {
-            //
-            let C1 = e.indexOf(pattern[0]);
-        
-            let C2 = e.indexOf(pattern[1]);
-            if (C2 < C1) return false;
-            C2 = e.substring(C1+1).indexOf(pattern[1]);
-        
-            let C3 = e.indexOf(pattern[2]);
-            if (C3 < C1) return false;
-            C3 = e.substring(C1+1).indexOf(pattern[2]);
-            if (C3 < C2) return false;
-            C3 = e.substring(C2 + C1 + 2).indexOf(pattern[2]);
-        
-            return C1 >= 0 && C2 >= 0 && C3 >= 0;
-        };
-        return f;
-    }
+function findMatchedByPattern(pattern) {
+    // TODO: implement this!
+    const f = (e) => {
+        //
+        let C1 = e.indexOf(pattern[0]);
+    
+        let C2 = e.indexOf(pattern[1]);
+        if (C2 < C1) return false;
+        C2 = e.substring(C1+1).indexOf(pattern[1]);
+    
+        let C3 = e.indexOf(pattern[2]);
+        if (C3 < C1) return false;
+        C3 = e.substring(C1+1).indexOf(pattern[2]);
+        if (C3 < C2) return false;
+        C3 = e.substring(C2 + C1 + 2).indexOf(pattern[2]);
+    
+        return C1 >= 0 && C2 >= 0 && C3 >= 0;
+    };
+    return f;
+}
                         </pre>
+
                     <br><br>
 
                     <h4>Name of Kata 2</h4>
