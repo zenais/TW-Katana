@@ -72,84 +72,202 @@
                     <div><h3 class="z-h3 z-name">Manuel</h3></div>
                     <div><h3 class="z-h3 z-name">Zinaida</h3></div>
                 </div>
-                <div class="z-katas-item hide" id="z-kata-zinaida">
-                    <h3>Zinaidas Katas</h3>
-                    <h3>Twice linear</h4>
-                    <article>
-                        Consider a sequence u where u is defined as follows:
-                    </article>
-                    <ol>
-                        <li></li>
-                    </ol>
-                    <h4>Your Task</h4>
-                    <article>
-                        Implement a function find_matched_by_pattern(pattern) that returns a predicate function, testing a string input and returning true if the string is matching the pattern, false otherwise.
-
-                        A word is considered a match for a given pattern if the first occurrence of each letter of the pattern is found in the same order in the word. If a character in the pattern is duplicated, the same logic applies further.
-
-                        The pattern will always be a string of size 3.
-                    </article>
-
-                    <pre>
-function findMatchedByPattern(pattern) {
-    // TODO: implement this!
-    const f = (e) => {
-        //
-        let C1 = e.indexOf(pattern[0]);
-    
-        let C2 = e.indexOf(pattern[1]);
-        if (C2 < C1) return false;
-        C2 = e.substring(C1+1).indexOf(pattern[1]);
-    
-        let C3 = e.indexOf(pattern[2]);
-        if (C3 < C1) return false;
-        C3 = e.substring(C1+1).indexOf(pattern[2]);
-        if (C3 < C2) return false;
-        C3 = e.substring(C2 + C1 + 2).indexOf(pattern[2]);
-    
-        return C1 >= 0 && C2 >= 0 && C3 >= 0;
-    };
-    return f;
-}
+                <!-- ZINAIDA -->
+                <div class="z-katas-item" id="z-kata-zinaida">
+                    <!-- FIRST KATA ZINAIDA -->
+                    <div class="z-kata-ex">
+                        <h4>Twice linear</h4>
+                        <article>
+                            Consider a sequence u where u is defined as follows:
+                            <ol>
+                                <li>
+                                    The number <code>u(0) = 1</code> is the first one in <code>u</code>.
+                                </li>
+                                <li>
+                                    For each <code>x</code> in <code>u</code>, then <code>y = 2 * x + 1</code> and <code>z = 3 * x + 1</code> must be in <code>u</code> too.
+                                </li>
+                                <li>
+                                    There are no other numbers in <code>u</code>.
+                                </li>                            
+                            </ol>
+                            Ex: <code>u = [1, 3, 4, 7, 9, 10, 13, 15, 19, 21, 22, 27, ...]</code> <br>
+                            Task: <br>
+                            Given parameter n the function dbl_linear (or dblLinear...) returns the element u(n) of the ordered sequence u (so, there are no duplicates).
+                        </article>
+                        <pre>
+        function dblLinear(n) {
+            let list = {1: true};
+            let i = 0;
+            let nextIndex = 1;
+        
+            while ((i/2)-1 <= n ){
+                while(list[nextIndex] === undefined){
+                    nextIndex += 1;
+                }
+                let val1 = (nextIndex * 2) + 1;
+                let val2 = (nextIndex * 3) + 1;
+                list[val1] = true;
+                list[val2] = true;
+                i += 1;
+                nextIndex += 1;
+            }
+            i = 0;
+                for (const prop in list){
+                    if (i === n) return Number(prop);
+                    i += 1;
+                }
+            return;
+        }
                         </pre>
+                    </div>
+                    <br>
+                    <hr>
 
-                    <br><br>
+                    <!-- SECOND KATA ZINAIDA -->
+                    <div class="z-kata-ex">
+                        <h4>Pyramid Slide Down</h4>
+                        <article>
+                            Imagine that you have a pyramid built of numbers, like this one here:                        
+                            <pre>
+    /3/
+    \7\ 4 
+    2 \4\ 6 
+    8 5 \9\ 3
+                            </pre>                        
+                            Let's say that the 'slide down' is the maximum sum of consecutive numbers from the top to the bottom of the pyramid. As you can see, the longest 'slide down' is <code>3 + 7 + 4 + 9 = 23</code> <br>
+                            <pre>
+    * With the input `[[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]]`       
+    * Your function should return `23`.                                
+                            </pre>
+                        </article>
+                        <pre>
+        function longestSlideDown (pyramid) {
 
-                    <h4>Name of Kata 2</h4>
-                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
-                    <code>
-                        console.log("Hello World");
-                    </code>
+            for (let i = pyramid.length - 2; i >= 0 ; i--){
+                for (let j = 0; j < pyramid[i].length; j++){
+                    let sum2= 0;
+                    let sum1 = 0;
+                    sum1 = pyramid[i][j] + pyramid[i+1][j]; 
+                    sum2 = pyramid[i][j] + pyramid[i+1][j+1]; 
+                    pyramid[i][j] = sum1 > sum2 ? sum1 : sum2;
+                }
+            }
+            return pyramid[0][0];
+        }
+                        </pre>
+                    </div>
+                    
                 </div>
+
+                <!-- MANUEL -->
                 <div class="z-katas-item hide" id="z-kata-manuel">
-                    <h3>Manuels Katas</h3>
-                    <h4>Name of Kata </h4>
-                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
-                    <code>
-                        console.log("Hello World");
-                    </code>
-                    <br><br>
+                    <!-- FIRST KATA MANUEL -->
+                    <div class="z-kata-ex">
+                        <h4>Create Phone Number</h4>
+                        <article>
+                            Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number. <br>
+                            <strong>Example</strong> <br><br>
+                            <code>
+                                createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+                            </code> <br><br>
+                            The returned format must be correct in order to complete this challenge.<br> Don't forget the space after the closing parentheses!
+                        </article>
+                        <pre>
+        function createPhoneNumber(numbers){
+            let phoneNumber = "(xxx) xxx-xxxx"
+            
+            for (let i = 0; i < numbers.length; i++) {
+                phoneNumber = phoneNumber.replace("x", numbers[i]);
+            }
+            return phoneNumber
+            }
+                        </pre>
+                    </div>
+                    <br>
+                    <hr>
+                    <!-- SECOND KATA MANUEL -->
+                    <div class="z-kata-ex">
+                        <h4>Stop gninnipS My sdroW!</h4>
+                        <article>
+                            Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.<br><br>
 
-                    <h4>Name of Kata 2</h4>
-                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
-                    <code>
-                        console.log("Hello World");
-                    </code>
+                            <strong>Examples:</strong><br><br>
+                            <code>
+                                spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" <br>
+                                spinWords( "This is a test") => returns "This is a test" <br>
+                                spinWords( "This is another test" )=> returns "This is rehtona test"
+                            </code>
+                        </article>
+                        <pre>
+        function spinWords(string) {
+            let newArr = string.split(' ');
+            for (let i = 0; i < newArr.length; i++) {
+                if (newArr[i].length >= 5)
+                newArr[i] = newArr[i].split('').reverse().join('');
+            }
+            return newArr.join(' ');
+            }
+                        </pre>
+                    </div>                    
                 </div>
-                <div class="z-katas-item hide" id="z-kata-san">
-                    <h3>Sans Katas</h3>
-                    <h4>Name of Kata </h4>
-                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
-                    <code>
-                        console.log("Hello World");
-                    </code>
-                    <br><br>
 
-                    <h4>Name of Kata 2</h4>
-                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue felis, tristique eget quam non, feugiat volutpat nisl. Sed egestas eget dolor quis condimentum. Suspendisse cursus nisi nisl, vel aliquet metus ornare et. Integer bibendum ipsum mi, at lobortis libero molestie sed. Suspendisse felis tellus, eleifend a mi non, dapibus consequat libero. Nullam et blandit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam diam nisi, molestie a hendrerit et, feugiat vitae erat. Praesent malesuada congue augue nec consectetur. </article>
-                    <code>
-                        console.log("Hello World");
-                    </code>
+                <!-- SAN -->
+                <div class="z-katas-item hide" id="z-kata-san">
+                    <!-- FIRST KATA SAN -->
+                    <div class="z-kata-ex">
+                        <h4>BMI Calculator</h4>
+                        <article>
+                            Write function bmi that calculates body mass index (bmi = weight / height<sup>2</sup>). <br><br>
+                            <code>
+                                if bmi <= 18.5 return "Underweight" <br>
+                                if bmi <= 25.0 return  Normal" <br>                                
+                                if bmi <= 30.0 return "Overweight" <br>                                 
+                                if bmi > 30 return "Obese"
+                            </code>
+                        </article>
+                        <pre>
+        function bmi(weight, height) {
+            let x = weight
+            let y = height
+            let result = x / (Math.pow(y,2))
+            if( result <= 18.5){
+                return "Underweight";
+                }else if (result <=25.0){
+                return "Normal"
+                }else if (result <= 30.0){
+                return "Overweight"
+                }else if(result > 30){
+                return "Obese"
+                }
+            }
+                        </pre>
+                    </div>
+                    <br>
+                    <hr>
+                    <!-- SECOND KATA SAN -->
+                    <div class="z-kata-ex">
+                        <h4>Localize The Barycenter of a Triangle</h4>
+                        <article>
+                            <img src="./images/Z_img/triangle.png" alt="">
+                            The medians of a triangle are the segments that unit the vertices with the midpoint of their opposite sides. The three medians of a triangle intersect at the same point, called the barycenter or the centroid. Given a triangle, defined by the cartesian coordinates of its vertices we need to localize its barycenter or centroid.<br><br>
+                            <strong>Examples:</strong><br><br>
+                            <code>
+                                barTriang([4, 6], [12, 4], [10, 10]) ------> [8.6667, 6.6667] <br>
+                                barTriang([4, 2], [12, 2], [6, 10]) ------> [7.3333, 4.6667]<br>
+                            </code>
+                        </article>
+                        <pre>
+        function barTriang(p1, p2, p3){
+            var x = p1[0] + p2[0] + p3[0]
+            var y = p1[1] + p2[1] + p3[1]
+            var y1 = y / 3
+            var x1 = x / 3
+            var roundX = x1.toFixed(4)
+            var roundY = y1.toFixed(4)
+            return [Number([roundX]), Number(roundY)];
+            }
+                        </pre>
+                    </div>                    
                 </div>
 
             </div> <!--END OF MAIN CONTENT-->

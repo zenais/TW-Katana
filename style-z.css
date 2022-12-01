@@ -145,6 +145,9 @@ a {
     flex-grow: 1;
     text-align: center;
 }
+.z-name {
+    font-size: 30px;
+}
 .z-name:hover {
     transform: scale(1.2);
     color: #102E4A;
@@ -152,14 +155,15 @@ a {
 .z-katas-item{
     padding: 0 10%;   
     font-size: 20px;
+    padding-bottom: 50px;
 }
-.z-katas-item > h4 {
+.z-katas-item > div > h4 {
     font-size: 25px;
 }
-.z-katas-item > h3 {
+.z-katas-item > div > h3 {
     font-size: 30px;
 }
-.z-katas-item > pre {
+.z-katas-item > div > pre {
     background-color: var(--color-oxford-blue);
     color: white;
     font-size: 18px;
@@ -168,4 +172,27 @@ a {
 }
 .hide {
     display: none;
+}
+/* COPIED FROM INTERNET */
+hr {
+    margin-top: 20px;
+    padding: 2px 0;
+    border: none;
+    background-color: whitesmoke;
+    letter-spacing: 5px;
+}
+
+.hr1 {
+    margin-left: 0;
+}
+
+.hr2 {
+    margin-right: 0;
+}
+
+.trans--grow {
+    -webkit-transition: width 1s ease-out;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 1s ease-out;
+    width: 0%;
 }
