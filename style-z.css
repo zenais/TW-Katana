@@ -41,6 +41,7 @@ a:hover {
     display: flex;
     align-items: stretch;
     min-height: 800px;
+
 }
 .navbar{
     align-items: center;
@@ -55,7 +56,7 @@ a:hover {
     background-color: var(--color-prussian-blue);
     color: var(--color-misty-rose);
     font-size: 24px;
-    flex-basis: 20%;
+    /* flex-basis: 20%; */
 }
 .side-item {
     background-color: var(--color-oxford-blue);
@@ -92,6 +93,7 @@ a:hover {
     flex-direction: column;
     align-items: stretch;
     font-size: 15px;
+    max-width: 1000;
 }
 .z-main-content > div {
     background-color: lightgray;
@@ -108,6 +110,7 @@ a:hover {
 
 .z-main-content > div:hover{
     background-color: rgb(221, 221, 221);
+    
 }
 .z-lang {
     display: flex;
@@ -175,23 +178,7 @@ a:hover {
 /* COPIED FROM INTERNET */
 hr {
     margin-top: 20px;
-    padding: 2px 0;
     border: none;
     background-color: whitesmoke;
     letter-spacing: 5px;
-}
-
-.hr1 {
-    margin-left: 0;
-}
-
-.hr2 {
-    margin-right: 0;
-}
-
-.trans--grow {
-    -webkit-transition: width 1s ease-out;
-    /* For Safari 3.1 to 6.0 */
-    transition: width 1s ease-out;
-    width: 0%;
 }
